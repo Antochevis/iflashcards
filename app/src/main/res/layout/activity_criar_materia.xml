@@ -71,11 +71,15 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/editTituloMateria"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="POO"
+                        android:background="@null"
+                        android:hint="Ex: POO, Algoritmos"
+                        android:inputType="textCapWords"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/text_muted"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>

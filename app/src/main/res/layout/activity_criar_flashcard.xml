@@ -51,38 +51,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtTituloTela">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:padding="16dp">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:text="SELECIONAR MATÉRIA"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ADICIONAR A DISCIPLINA"
-                            android:textColor="@color/text_muted"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Algoritmos e Programação"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <Spinner
+                        android:id="@+id/spinnerMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Rótulo Seção Frente -->
@@ -131,18 +119,23 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/editPerguntaFlashcard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="O que é uma variável em programação?"
+                        android:background="@null"
+                        android:hint="O que é uma variável?"
+                        android:inputType="textMultiLine"
+                        android:minLines="2"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/text_muted"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="16dp"
                         android:text="Seja direto e específico"
                         android:textColor="@color/text_muted"
                         android:textSize="12sp" />
@@ -195,17 +188,22 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/editRespostaFlashcard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="É um espaço na memória usado para armazenar um valor que pode ser consultado ou alterado durante a execução do programa."
+                        android:background="@null"
+                        android:hint="É um espaço na memória..."
+                        android:inputType="textMultiLine"
+                        android:minLines="3"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/text_muted"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="16dp"
                         android:text="Explique com suas palavras"
                         android:textColor="@color/text_muted"
                         android:textSize="12sp" />
